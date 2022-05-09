@@ -1,3 +1,4 @@
+<!--this view has been created manually, it owns to a new created product-->
 <% if notice %>
   <aside id="notice"><%= notice %></aside>
 <% end %>
@@ -14,7 +15,7 @@
   </tfoot>
   <tbody>
     <% @products.each do |product| %>
-      <tr class="<% cycle ('list_line_odd', 'list_line_even') %>">
+      <tr class="<% cycle('list_line_odd', 'list_line_even') %>">
         <td class="image">
           <%= image_tag(product.image_url, class: 'list_image') %>
         </td>
