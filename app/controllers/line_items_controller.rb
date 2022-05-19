@@ -2,6 +2,7 @@ class LineItemsController < ApplicationController
   include CurrentCart
   before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [ :show, :edit, :update, :destroy ]
+  skip_before_action :authorize, only: %i(create)
 
   # GET /line_items or /line_items.json
   def index
@@ -29,7 +30,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to store_index_url }
-        format.js { @current_item = @line_item }
+        format.js { @current_item = @line_item } # we "stop" the create method and start the create.js.erb
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }

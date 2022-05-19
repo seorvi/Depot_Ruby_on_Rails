@@ -2,4 +2,5 @@ cart = document.getElementById("cart")
 cart.innerHTML = "<%= j render(@cart) %>"
 
 notice = document.getElementById("notice")
-if (notice) notice.style.display = "none"
+if (notice) notice.style.display = "none" <!--I make disappear the message "empty cart" because it was there even if the Cart was empty-->
+

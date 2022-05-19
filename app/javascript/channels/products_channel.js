@@ -16,3 +16,5 @@ consumer.subscriptions.create("ProductsChannel", {
     }
   }
 });
+
+// now if we update a product, we can update the whole store

@@ -7,3 +7,6 @@ class ProductsChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 end
+
+# I generate this file whith: bin/rails generate channel products
+# line 3
