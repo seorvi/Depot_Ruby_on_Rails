@@ -5,7 +5,7 @@ class PurchaseOrderPayType extends React.Component {
         return (
             <div>
                 <div className="field">
-                    <label htmlFor="order_po_number">PO #</label>
+                    <label htmlFor="order_po_number">Purchase Order #</label>
                     <input type="password" name="order[po_number]" id="order_po_number" />
                 </div>
             </div>
